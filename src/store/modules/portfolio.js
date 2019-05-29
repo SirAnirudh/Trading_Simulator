@@ -8,7 +8,7 @@ const mutations = {
       const record = state.stocks.find(element => element.id === stockId);
 
       if (record) {
-        record.quantity += quanity;
+        record.quantity += quantity;
       }
       else {
         state.stocks.push({
@@ -53,7 +53,11 @@ const getters = {
   funds(state) {
     return state.funds;
   }
+};
 
-
-
+export default {
+  state,
+  mutations,
+  actions,
+  getters
 };
